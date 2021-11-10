@@ -10,25 +10,25 @@ class TwoStackQueue {
     }
 
     add(dataUnit) {
-        while (this.#stackTwo.showStatus().length !== 0) {
-            const currentUnit = this.#stackTwo.remove();
+        let currentUnit;
+        while (currentUnit = this.#stackTwo.poll()) {
             this.#stackOne.add(currentUnit);
         }
 
         this.#stackOne.add(dataUnit); 
     }
 
-    remove() {
-        while (this.#stackOne.showStatus().length !== 0) {
-            const currentUnit = this.#stackOne.remove();
+    poll() {
+        let currentUnit;
+        while (currentUnit = this.#stackOne.poll()) {
             this.#stackTwo.add(currentUnit);
         }
-        return this.#stackTwo.remove();
+        return this.#stackTwo.poll();
     }
 
     showStatus() {
-        while (this.#stackTwo.showStatus().length !== 0) {
-            const currentUnit = this.#stackTwo.remove();
+        let currentUnit;
+        while (currentUnit = this.#stackTwo.poll()) {
             this.#stackOne.add(currentUnit);
         }
 

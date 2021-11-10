@@ -9,7 +9,7 @@ class Stack {
         this.#data.push(dataUnit);
     }
 
-    remove() {
+    poll() {
        return this.#data.pop();
     }
 

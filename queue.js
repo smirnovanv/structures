@@ -9,7 +9,7 @@ class Queue {
         this.#data.push(dataUnit);
     }
 
-    remove() {
+    poll() {
         const currentDataUnit = this.#data[1];
         this.#data.shift();
         return currentDataUnit;

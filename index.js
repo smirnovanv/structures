@@ -6,17 +6,17 @@ const queue = new Queue();
 queue.add('item 1');
 queue.add('item 2');
 queue.add('item 3');
-queue.remove();
+queue.poll();
 queue.add('item 4');
 
 console.log(queue.showStatus());
 
-const strange = new TwoStackQueue();
+const twoStackQueue = new TwoStackQueue();
 
-strange.add('item 1');
-strange.add('item 2');
-strange.add('item 3');
-strange.remove();
-strange.add('item 4');
+twoStackQueue.add('item 1');
+twoStackQueue.add('item 2');
+twoStackQueue.add('item 3');
+twoStackQueue.poll();
+twoStackQueue.add('item 4');
 
-console.log(strange.showStatus());
+console.log(twoStackQueue.showStatus());
