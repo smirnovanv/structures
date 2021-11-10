@@ -1,18 +1,20 @@
 class Stack {
+    #data;
+
     constructor() {
-        this.data = [];
+        this.#data = [];
     }
 
     add(dataUnit) {
-        this.data.push(dataUnit);
+        this.#data.push(dataUnit);
     }
 
     remove() {
-       return this.data.pop();
+       return this.#data.pop();
     }
 
     showStatus() {
-        return this.data;
+        return this.#data;
     }
 }
 
